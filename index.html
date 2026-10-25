@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metronom online — za darmo</title>
+<meta name="description" content="Darmowy metronom: tempo 40–208 BPM, akcent co 2/3/4 uderzenia. Do ćwiczeń na gitarze, pianinie i perkusji.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥁</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Metronom</h1>
+  <p>Trzymaj tempo. Klik co uderzenie, akcent co takt.</p>
+  <section class="card">
+    <div id="bpm-out" class="big">100 BPM</div>
+    <label>Tempo <input id="bpm" type="range" min="40" max="208" value="100" style="width:100%"></label>
+    <label>Akcent co <select id="beats"><option value="0">brak</option><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option></select></label>
+    <p><button id="toggle" type="button">Start</button></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>Dźwięk generujemy na żywo (WebAudio, zero plików), a harmonogram wyprzedza kliknięcia o 0,1 sekundy — dzięki temu tempo nie „pływa”, nawet gdy przeglądarka ma chwilę zadyszki. Akcent (wyższy dźwięk) wypada na pierwszą miarę taktu.</p>
+    <p><strong>Przykład:</strong> nauka gamy C-dur szesnastkami? Ustaw 60 BPM z akcentem co 4 i graj po jednej nucie na klik; gdy wyjdzie czysto 3 razy z rzędu, podnieś do 66. Takie +10% tygodniowo to najszybsza droga do szybkich palców.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
